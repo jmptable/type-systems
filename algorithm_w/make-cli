@@ -1,0 +1,7 @@
+ocamlyacc parser.mly
+ocamllex lexer.mll
+
+ocamlfind ocamlc -linkpkg -g \
+	-o tycli \
+	expr.ml parser.mli infer.ml parser.ml lexer.ml core.ml \
+  cli.ml
